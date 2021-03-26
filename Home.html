@@ -1,7 +1,9 @@
+<! -- Code after changr -->
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-<title> الصفحة الرئيسية </title>
+<title> Food Truck </title>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
@@ -32,80 +34,53 @@ body {
     font-size: 12px;
     color: #333;
 }
-.wp-block {
-  margin: 0 0 15px 0;
-  -webkit-transition: all .3s linear;
-  transition: all .3s linear;
-  position: relative;
-  cursor: default;
-  border-radius: 2px;
-}
-.wp-block.inverse .figure {
-  position: relative;
+div.pic {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
 }
 
-.wp-block.inverse .figure img {
-  width: 80%;
+div.pic:hover {
+  border: 1px solid #777;
 }
 
-.wp-block-info-over.left {
-  background: transparent;
-  border: 0;
-  padding: 0;
-  position: absolute;
-  bottom: 55px;
-  left: 0;
-}
-
-.wp-block-info-over {
+div.pic img {
   width: 100%;
-  padding: 10px;
-  background: #9cd70e;
-  border-top: 1px solid #e0eded;
+  height: auto;
 }
 
-.wp-block-info-over.left h2 {
-  font-size: 13px;
-  font-weight: normal;
-}
+div.name {
+  padding: 15px;
+  text-align: center;
+}    
 
-.wp-block.inverse h2, .wp-block.inverse{
-  margin: 0;
-  padding: 12px 15px 0 0;
-  font-weight: 500;
-  font-size: 16px;
-  color: #333;
-  text-transform: none;
-}
-
-.wp-block-info-over.left h2 a {
-  padding: 10px 15px 20px 15px;
-  margin: 0;
-  font-size: 16px;
-  text-transform: capitalize;
-  font-weight: 600;
-  background: rgba(51,51,51,0.8);
-  background: #2c3e50;
-  color: #fff;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-.wp-block-info-over.left h2 .label {
-  position: absolute;
-  bottom: -30px;
-  left: 15px;
-  padding: .5em .6em .5em;
-}
-
-.wp-block.inverse h2, .wp-block.inverse{
-  margin: 0;
-  padding: 12px 15px 0 0;
-  font-weight: 500;
-  font-size: 16px;
-  color: #333;
-  text-transform: none;
-}
+#searchbar{
+     margin-left: 15%;
+     padding:15px;
+     border-radius: 10px;
+   }
+ 
+   input[type=text] {
+      width: 30%;
+      -webkit-transition: width 0.15s ease-in-out;
+      transition: width 0.15s ease-in-out;
+   }
+ 
+   /* When the input field gets focus,
+        change its width to 100% */
+   input[type=text]:focus {
+     width: 70%;
+   }
+ 
+ #name{
+    font-size:  1.5em;
+    margin-left: 90px;
+   }
+ 
+#name{
+   display: list-item;    
+  }        
 </style>
 
 <body>
@@ -118,17 +93,13 @@ body {
 <div class="w3-container">
     <div class="w3-bar w3-round w3-light-grey">
 	  <a href="#"><button class="w3-bar-item w3-button w3-right">الصفحة الرئيسية</button></a>
-                <div class="input-group w3-right">
-                    <input type="text" class="form-control" placeholder="بحث">
-                    <span class="input-group-btn w3-left">
-              <button class="btn btn-info btn-lg" type="button">
-                        <i class="glyphicon glyphicon-search"></i>
-                        بحث
-                    </button>
-            </span>
-                </div>
-			</div>
-<br>
+			<!-- input tag -->
+    <input id="searchbar" onkeyup="search_foodtruck()" type="text" name="search" placeholder="بحث..">
+    
+    <!-- linking javscript -->
+   <script src="./foodtruck.js"></script>
+			</div>	
+   <br>
 	
 <div>
   <!-- Grid -->
@@ -141,58 +112,39 @@ body {
       <div class="w3-container w3-white w3-margin w3-padding-large">
 	  
                 <div class="row">
-				 <div class="col-md-4 col-sm-4 col-xs-12">
-          <!-- Block Default - More info over block -->
-          <div class="wp-block inverse no-margin">
-                <div class="figure w3-right">
-                    <img src="Food Trucks.png" alt="Fast Food Trucks">
-                  <div class="wp-block-info-over left w3-right">
-                        <h2>
-                            <span class="pull-left">
-                                <a href="#">الاطعمة السريعة</a>
-                            </span>
-                        </h2>
-                    </div>
-                </div>
-            </div>
+
+				<div class="pic w3-right">
+             <a href="#">
+                <img src="The 60 Pasta.jpg" alt="Cinque Terre" width="600" height="400">
+             </a>
+          <!-- <div class="desc"><span>The 60 Pasta</span></div> -->
+              <id class="name"><h6>The 60 Pasta</h6>
+		  </div>
+
+          <div class="pic w3-right">
+            <a href="#">
+               <img src="Crepe Car.jpg" alt="Forest" width="600" height="400">
+            </a>
+          <!-- <div class="desc"><span>Crepe Car</span></div> -->
+               <id class="name"><h6>Crepe Car</h6>
+          </div>
+
+          <div class="pic w3-right">
+             <a href="#">
+                <img src="Dose Of Candy.jpg" alt="Northern Lights" width="600" height="400">
+             </a>
+          <!-- <div class="desc"><span>Dose Of Candy</span></div> -->
+               <id class="name"><h6>Dose Of Candy</h6>
         </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <!-- Block Default - More info over block -->
-          <div class="wp-block inverse no-margin w3-right">
-                <div class="figure w3-right">
-                    <img src="Street Food Cars.png" alt="Drinks Trucks">
-                  <div class="wp-block-info-over left">
-                        <h2>
-                            <span class="pull-left">
-                                <a href="#">مشروبات</a>
-                            </span>
-                        </h2>
-                    </div>
-                </div>
-            </div>
+
+        <div class="pic w3-right">
+           <a href="#">
+              <img src="Baozi.jpg" alt="Mountains" width="600" height="400">
+           </a>
+        <!-- <div class="desc"><span>Baozi</span></div> -->
+             <id class="name"><h6>Baozi</h6>
         </div>
-				<!--  
-				  <a href="#">
-                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
-                            <img class="img-responsive" src="Food Trucks.png" alt="Fast Food Trucks">
-                        </div>
-                        <div class="col-xs-2 col-sm-6 col-md-6 col-lg-5 title">
-							 <h3>الاطعمة السريعة</h3>
-                        </div>
-                    </a>
-					
-					<a href="#">
-                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
-                            <img class="img-responsive" src="Street Food Cars.png" alt="Drinks Trucks">
-                        </div>
-                        <div class="col-xs-2 col-sm-6 col-md-6 col-lg-5 title">
-							 <h3>مشروبات</h3>
-                        </div>
-                    </a>
-				</div>
-	  -->
-	  	  	
-	
+				
         </div> <!-- END Blog entry -->  
       </div>  <!-- END Blog entries -->
   </div><!-- END GRID -->
@@ -210,9 +162,26 @@ body {
 	  </div>
       </div>  
     </div>
-  
-  </div>  
+  </div>
+  </div> 
+</div>  
   <br>
+  <script>
+function search_foodtruck() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('name');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
+</script> 
   
     <div class="footer">
     <h2>تواصل معنا</h2>
