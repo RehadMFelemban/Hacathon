@@ -3,8 +3,11 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-<title> Food Truck </title>
+<title> Truck Me </title>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./index.js"></script>
+
 </head>
 
 <style>
@@ -80,11 +83,20 @@ div.name {
  
 #name{
    display: list-item;    
-  }        
+  }   
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+  
 </style>
 
 <body>
-<header class="w3-display-container w3-content w3-wide" style="max-width:190px;" id="h">
+<header class="w3-display-container w3-content w3-wide" style="max-width:300px;" id="h">
   <br>
   <img class="w3-image" src="Logo.png">
 </header>
@@ -92,7 +104,7 @@ div.name {
 
 <div class="w3-container">
     <div class="w3-bar w3-round w3-light-grey">
-	  <a href="#"><button class="w3-bar-item w3-button w3-right">الصفحة الرئيسية</button></a>
+	  <a href="file:///C:/Users/DELL/Downloads/%D9%85%D8%AC%D9%84%D8%AF%20%D8%AC%D8%AF%D9%8A%D8%AF/Home.html#"><button class="w3-bar-item w3-button w3-right">الصفحة الرئيسية</button></a>
 			<!-- input tag -->
     <input id="searchbar" onkeyup="search_foodtruck()" type="text" name="search" placeholder="بحث..">
     
@@ -114,43 +126,35 @@ div.name {
                 <div class="row">
 
 				<div class="pic w3-right">
-             <a href="#">
+             <a href="file:///C:/Users/DELL/Downloads/%D9%85%D8%AC%D9%84%D8%AF%20%D8%AC%D8%AF%D9%8A%D8%AF/result.html#">
                 <img src="The 60 Pasta.jpg" alt="Cinque Terre" width="600" height="400">
              </a>
               <id class="name"><h6>The 60 Pasta</h6>
-		  </div>
+		</div> 
 		  		  
 		  <div class="pic w3-right">
-            <a href="#">
+            <a href="file:///C:/Users/DELL/Downloads/%D9%85%D8%AC%D9%84%D8%AF%20%D8%AC%D8%AF%D9%8A%D8%AF/Crepe%20Car.html">
                <img src="Crepe Car.jpg" alt="Forest" width="600" height="400">
             </a>
                <id class="name"><h6>Crepe Car</h6>
-          </div>
+          </div> 
 		  		  
 		  <div class="pic w3-right">
-             <a href="#">
+             <a href="file:///C:/Users/DELL/Downloads/%D9%85%D8%AC%D9%84%D8%AF%20%D8%AC%D8%AF%D9%8A%D8%AF/Dose%20Of%20Candy.html">
                 <img src="Dose Of Candy.jpg" alt="Cinque Terre" width="600" height="400">
              </a>
               <id class="name"><h6>Dose Of Candy</h6>
-		  </div>
+		  </div> 
 		  		
 		<div class="pic w3-right">
-           <a href="#">
+           <a href="file:///C:/Users/DELL/Downloads/%D9%85%D8%AC%D9%84%D8%AF%20%D8%AC%D8%AF%D9%8A%D8%AF/Baozi.html">
               <img src="Baozi.jpg" alt="Mountains" width="600" height="400">
            </a>
              <id class="name"><h6>Baozi</h6>
-        </div> 
-				
-		<div class="pic w3-right">
-            <a href="#">
-               <img src="images.png" alt="Forest" width="600" height="400">
-            </a>
-               <id class="name"><h6>حلبة تراك</h6>
-          </div>
-		  </div>
-
-		</div>
+        </div>  	 
 		
+		</div>
+		 </div>
         </div> <!-- END Blog entry -->  
 		     <div class="w3-col l4">
       <!-- About Card -->
